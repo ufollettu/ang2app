@@ -16,6 +16,12 @@ class="form-control"
     Add Server
 </button>
 <hr>
-<p>{{serverCreationStatus}}</p>
-<app-server></app-server>
-<app-server></app-server>
+<!--<p>{{serverCreationStatus}}</p>-->
+<p *ngIf="serverCreated">server created, name {{serverName}}</p>
+<!-- * means structural directive, changes the structure of the DOM-->
+
+<!--<ng-template #noServer>-->
+  <!--<p>No server</p>-->
+<!--</ng-template>-->
+<!-- #noServer to use with else statement-->
+<app-server *ngFor="let server of servers; let i = index"></app-server>

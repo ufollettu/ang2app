@@ -1,3 +1,6 @@
-<p>
+<p
+  [ngStyle]="{'color' : getColor()}"
+  [ngClass]="{'online': serverStatus === 'online'}"> <!--css class : condition -->
+  <!-- [] we are binding to a property in the ngStyle directive-->
   server Id: {{serverId}} is {{getServerStatus()}}
 </p>
